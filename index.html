@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic ERP Portal — Programme Migration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<!-- ================= LOGIN ================= -->
+<div id="login-screen">
+  <div class="login-left">
+    <div class="crest"><div class="crest-mark">AEP</div><div class="crest-text">Office of Academics</div></div>
+    <div class="login-hero">
+      <h1>Academic ERP Portal</h1>
+      <p>Programme Migration Module — one workflow connecting the Student, Academic Office, Dean Academics, Accounts, SDC and the Assistant Director's office.</p>
+    </div>
+    <div class="login-modules">
+      <div class="mod-chip">Programme Migration</div>
+      <div class="mod-chip">Eligibility &amp; Invoicing</div>
+      <div class="mod-chip">Merit &amp; Allotment</div>
+      <div class="mod-chip">Dean Approval</div>
+      <div class="mod-chip">Registration &amp; Email</div>
+    </div>
+  </div>
+  <div class="login-right">
+    <div class="login-box">
+      <div class="eyebrow">Sign in</div>
+      <h2>Welcome to AEP</h2>
+      <p class="sub">Select your role to continue.</p>
+      <div class="role-tabs" id="role-tabs"></div>
+      <div class="field"><label>User ID</label><input type="text" id="login-id" placeholder="e.g. 25BME1042 or staff ID"></div>
+      <div class="field"><label>Password</label><input type="password" placeholder="••••••••"></div>
+      <button class="btn btn-primary" onclick="doLogin()">Login →</button>
+      <div class="demo-note">Prototype only — any ID/password signs you in with demo data.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app-screen">
+  <div class="shell">
+    <div class="sidebar">
+      <div class="sb-crest"><div class="crest-mark">AEP</div><div class="sb-crest-text">Academic ERP<br>Portal</div></div>
+      <div class="sb-role" id="sb-role"></div>
+      <div class="sb-user" id="sb-user"></div>
+      <div class="sb-nav" id="sb-nav"></div>
+      <div class="sb-logout" onclick="logout()">← Sign out</div>
+    </div>
+    <div class="main" id="main"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="dot"></span><span id="toast-msg"></span></div>
+<div id="modal-root"></div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
